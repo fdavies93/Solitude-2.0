@@ -301,3 +301,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.dll
+
+#PROJECT SPECIFIC
+#==========================
+Solitude-2/data/
