@@ -4,14 +4,9 @@
 int main()
 {
 	GraphicsStorage storage;
-	//printf("ate!");
-	//storage.LoadData("data/images.txt");
-	std::vector<sf::String> entries = LoadCSV("data/example.csv");
-	for (int i = 0; i < entries.size(); ++i)
-	{
-		if (i > 0) printf(", ");
-		printf("%s", entries[i].toAnsiString().c_str());
-	}
+	storage.LoadData("data/images.txt");
+	ImageData data = storage.GetImageData("image001");
+	printf("Left: %d Top: %d Width: %d Height: %d\n", data.rectangle.left, data.rectangle.top, data.rectangle.width, data.rectangle.height);
 	system("PAUSE");
 	return 0;
 }

@@ -2,7 +2,12 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-struct TextureData
+class TextureData
 {
-	sf::String fileName;
+public:
+	sf::Texture* texture;
+	int usedBy;
+	TextureData();
+	TextureData(TextureData&);
+	bool operator=(TextureData&);
 };

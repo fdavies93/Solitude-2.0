@@ -2,14 +2,16 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include "GraphicsStorage.h"
+#include "GraphicsLoader.h"
 
 class GraphicsCache
 {
 private:
-	const GraphicsStorage* storage;
+	GraphicsStorage* storage;
+	GraphicsLoader* loader;
 	std::map<std::string, sf::Texture> spriteSheets;
 public:
-	GraphicsCache(GraphicsStorage*);
+	GraphicsCache();
 	bool CacheTexture(sf::String);
 	bool UncacheTexture(sf::String);
 };

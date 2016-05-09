@@ -9,9 +9,8 @@ class GraphicsStorage
 {
 private:
 	std::map<std::string, ImageData> images;
-	bool LoadDataFile(sf::String);
 public:
- 	bool LoadData(sf::String);//loads all metadata based on a settings file
+	//loads all metadata based on a settings file: imageData 
+ 	bool LoadData(sf::String);
 	ImageData GetImageData(sf::String);
-	
 };

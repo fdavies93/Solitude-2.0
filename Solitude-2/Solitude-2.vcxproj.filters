@@ -54,6 +54,9 @@
     <ClInclude Include="UtilityFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GraphicsMessageQueue.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -64,6 +67,18 @@
     </ClCompile>
     <ClCompile Include="UtilityFunctions.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageData.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsCache.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureData.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsMessage.cpp">
+      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
