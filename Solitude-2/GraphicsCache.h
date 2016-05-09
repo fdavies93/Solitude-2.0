@@ -1,14 +1,13 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
+#include "SolitudeHeaders.h"
 #include "GraphicsStorage.h"
 #include "GraphicsLoader.h"
 
 class GraphicsCache
 {
 private:
-	GraphicsStorage* storage;
-	GraphicsLoader* loader;
+	std::shared_ptr<GraphicsStorage> storage;
+	std::shared_ptr<GraphicsLoader> loader;
 	std::map<std::string, sf::Texture> spriteSheets;
 public:
 	GraphicsCache();

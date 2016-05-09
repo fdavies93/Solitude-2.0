@@ -9,7 +9,6 @@ bool GraphicsStorage::LoadData(sf::String imageFile)
 		else if (imageEntries.size() % 6 != 0) throw 1;
 		ImageData curImageData;
 		long curVal;
-		char* errorChar;
 		for (int curEntry = 0; curEntry < imageEntries.size(); ++curEntry)
 		{
 			switch (curEntry % 6)

@@ -2,6 +2,6 @@
 
 GraphicsCache::GraphicsCache()
 {
-	storage = new GraphicsStorage;
-	loader = new GraphicsLoader;
+	storage = std::make_shared<GraphicsStorage>();
+	loader = std::make_shared<GraphicsLoader>();
 }

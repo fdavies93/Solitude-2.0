@@ -1,9 +1,7 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
+#include "SolitudeHeaders.h"
 #include "ImageData.h"
 #include "UtilityFunctions.h"
-#include <iostream>
 
 class GraphicsStorage
 {

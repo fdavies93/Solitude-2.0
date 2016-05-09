@@ -1,11 +1,10 @@
 #pragma once
-#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
+#include "SolitudeHeaders.h"
 
 class TextureData
 {
 public:
-	sf::Texture* texture;
+	std::shared_ptr<sf::Texture> texture;
 	int usedBy;
 	TextureData();
 	TextureData(TextureData&);

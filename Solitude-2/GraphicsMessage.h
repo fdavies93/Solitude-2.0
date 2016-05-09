@@ -1,5 +1,5 @@
 #pragma once
-#include <SFML\System.hpp>
+#include "SolitudeHeaders.h"
 #include "TextureData.h"
 
 enum GRAPHICS_MESSAGE_TYPES

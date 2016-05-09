@@ -1,5 +1,5 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "SolitudeHeaders.h"
 #include "GraphicsStorage.h"
 #include "GraphicsCache.h"
 #include "RenderData.h"
@@ -7,8 +7,8 @@
 class GraphicsRenderer
 {
 private:
-	const GraphicsStorage* storage;
-	const GraphicsCache* cache;
+	std::shared_ptr<GraphicsStorage> storage;
+	std::shared_ptr<GraphicsCache> cache;
 public:
 	GraphicsRenderer();
 	void Render(const RenderData&);//renders everything

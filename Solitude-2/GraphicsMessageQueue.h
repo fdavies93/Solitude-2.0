@@ -1,12 +1,12 @@
 #pragma once
-#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
+#include "SolitudeHeaders.h"
 #include "GraphicsMessage.h"
 
 class GraphicsMessageQueue
 {
 private:
-	sf::Mutex locked;
+	std::mutex queueLock;
+	std::vector<GraphicsMessage> messages;
 public:
 	void ReceiveMessage(GraphicsMessage);
 };
