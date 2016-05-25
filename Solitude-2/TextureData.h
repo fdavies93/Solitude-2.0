@@ -4,9 +4,10 @@
 class TextureData
 {
 public:
+	std::string fileName;
 	std::shared_ptr<sf::Texture> texture;
 	int usedBy;
 	TextureData();
-	TextureData(TextureData&);
-	bool operator=(TextureData&);
+	TextureData(const TextureData&);
+	bool operator=(const TextureData&);
 };

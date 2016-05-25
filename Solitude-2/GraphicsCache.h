@@ -2,15 +2,17 @@
 #include "SolitudeHeaders.h"
 #include "GraphicsStorage.h"
 #include "GraphicsLoader.h"
+#include "TextureData.h"
 
 class GraphicsCache
 {
 private:
-	std::shared_ptr<GraphicsStorage> storage;
 	std::shared_ptr<GraphicsLoader> loader;
-	std::map<std::string, sf::Texture> spriteSheets;
+	std::map<std::string, TextureData> textures;
 public:
 	GraphicsCache();
-	bool CacheTexture(sf::String);
-	bool UncacheTexture(sf::String);
+	void CacheTexture(std::string);
+	void UncacheTexture(std::string);
+	TextureData GetTexture(std::string);
+	void Update();//gets new output messages from loader, updates texture list, informs renderer 
 };

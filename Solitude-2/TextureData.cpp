@@ -5,14 +5,16 @@ TextureData::TextureData()
 
 }
 
-TextureData::TextureData(TextureData& toCopy)
+TextureData::TextureData(const TextureData& toCopy)
 {
+	fileName = toCopy.fileName;
 	texture = toCopy.texture;
 	usedBy = toCopy.usedBy;
 }
 
-bool TextureData::operator=(TextureData& toCopy)
+bool TextureData::operator=(const TextureData& toCopy)
 {
+	fileName = toCopy.fileName;
 	texture = toCopy.texture;
 	usedBy = toCopy.usedBy;
 	return true;

@@ -140,12 +140,15 @@
     <ClInclude Include="GraphicsStorage.h" />
     <ClInclude Include="ImageData.h" />
     <ClInclude Include="RenderData.h" />
+    <ClInclude Include="SolitudeHeaders.h" />
     <ClInclude Include="TextureData.h" />
     <ClInclude Include="UtilityFunctions.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GraphicsCache.cpp" />
+    <ClCompile Include="GraphicsLoader.cpp" />
     <ClCompile Include="GraphicsMessage.cpp" />
+    <ClCompile Include="GraphicsMessageQueue.cpp" />
     <ClCompile Include="GraphicsStorage.cpp" />
     <ClCompile Include="ImageData.cpp" />
     <ClCompile Include="main.cpp" />

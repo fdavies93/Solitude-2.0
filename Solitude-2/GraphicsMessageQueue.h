@@ -5,8 +5,11 @@
 class GraphicsMessageQueue
 {
 private:
-	std::mutex queueLock;
-	std::vector<GraphicsMessage> messages;
+	std::mutex queueMutex;
+	std::queue<GraphicsMessage> messages;
 public:
-	void ReceiveMessage(GraphicsMessage);
+	void ReceiveMessage(const GraphicsMessage&);
+	GraphicsMessage GetNextMessage();//pops message and returns a copy
+	std::queue<GraphicsMessage> GetAllMessages();
+	int size();
 };
