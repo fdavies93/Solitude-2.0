@@ -2,13 +2,12 @@
 
 GraphicsCache::GraphicsCache()
 {
-	loader = std::make_shared<GraphicsLoader>();
-	loader->Start();
+	loader.Start();
 }
 
 void GraphicsCache::CacheTexture(std::string fileName)
 {
-	loader->LoadTexture(fileName);
+	loader.LoadTexture(fileName);
 }
 
 void GraphicsCache::UncacheTexture(std::string fileName)
@@ -26,7 +25,6 @@ TextureData GraphicsCache::GetTexture(std::string fileName)
 	}
 	catch (std::out_of_range rangeException)
 	{
-		//printf("Texture %s isn't cached.\n", fileName.c_str());
 		toReturn.usedBy = -1;
 	}
 	return toReturn;
@@ -34,7 +32,7 @@ TextureData GraphicsCache::GetTexture(std::string fileName)
 
 void GraphicsCache::Update()
 {
-	std::queue<GraphicsMessage> newMessages = loader->GetOutputMessages();
+	std::queue<GraphicsMessage> newMessages = loader.GetOutputMessages();
 	GraphicsMessage nextMsg;
 	while (newMessages.size() > 0)
 	{
@@ -43,6 +41,7 @@ void GraphicsCache::Update()
 		if (nextMsg.type == GRAPHICS_MESSAGE_TYPES::MESSAGE_FINISHED_CACHING)
 		{
 			textures[nextMsg.message.fileName] = nextMsg.message;
+			//add information to message queue for ScreenManager
 		}
 	}
 }

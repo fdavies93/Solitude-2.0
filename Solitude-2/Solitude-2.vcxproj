@@ -75,7 +75,7 @@
     <IncludePath>C:\libs\SFML-2.3.2-windows-vc14-64-bit\SFML-2.3.2\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\SFML-2.3.2\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\SFML-2.4.2\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -97,7 +97,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\libs\SFML-2.3.2-windows-vc14-64-bit\SFML-2.3.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -132,14 +132,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="FrameData.h" />
     <ClInclude Include="GraphicsCache.h" />
     <ClInclude Include="GraphicsLoader.h" />
     <ClInclude Include="GraphicsMessage.h" />
     <ClInclude Include="GraphicsMessageQueue.h" />
-    <ClInclude Include="GraphicsRenderer.h" />
     <ClInclude Include="GraphicsStorage.h" />
     <ClInclude Include="ImageData.h" />
-    <ClInclude Include="RenderData.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="SolitudeHeaders.h" />
     <ClInclude Include="TextureData.h" />
     <ClInclude Include="UtilityFunctions.h" />

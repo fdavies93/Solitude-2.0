@@ -7,7 +7,7 @@
 class GraphicsCache
 {
 private:
-	std::shared_ptr<GraphicsLoader> loader;
+	GraphicsLoader loader;
 	std::map<std::string, TextureData> textures;
 public:
 	GraphicsCache();

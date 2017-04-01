@@ -27,13 +27,14 @@ int main()
 				window.close();
 		}
 		window.clear();
+		sprite.setScale(sprite.getScale() + sf::Vector2f(0.0001,0.0001));
 		window.draw(sprite);
 		window.display();
 	}
 	return 0;
 }
 
-/* nice test of loader
+/*nice test of loader
 
 GraphicsLoader loader;
 loader.Start();
