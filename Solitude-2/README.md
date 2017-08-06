@@ -16,3 +16,11 @@ Some nice features of Solitude 2:
 - You'll need to configure the linker paths in the solution / project.
 - As the project's dynamically linked, you will also need to include the appropriate .dlls in your testing directory.
 - Poke around in the main.cpp file. At the moment it loads a single image to test the asynchronous texture loading; you can configure this or use it as an entry point to understand how the architecture of the graphics engine is structured.
+
+##TODO
+
+- Implement rendering of sprites by ScreenManager
+- Sprite management needed in ScreenManager; but this can only be implemented with bigger system
+- Minimum for sprite management:
+  - Implement camera component
+  - Implement components being sent to modules

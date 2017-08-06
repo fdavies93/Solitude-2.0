@@ -6,6 +6,7 @@
 
 int main()
 {
+	int left = 0, top = 100;
 	GraphicsCache cache;
 	sf::Sprite sprite;
 	cache.CacheTexture("data/bbc-basic.jpg");
@@ -14,7 +15,7 @@ int main()
 		cache.Update();
 	}
 	sprite.setTexture(*cache.GetTexture("data/bbc-basic.jpg").texture, true);
-	sprite.setScale(sf::Vector2f(0.15, 0.15));
+	sprite.setScale(sf::Vector2f(1.0, 1.0));
 	sprite.setPosition(sf::Vector2f(0, 50));
 
 	sf::RenderWindow window(sf::VideoMode(500, 500), "Test Window");
@@ -27,7 +28,7 @@ int main()
 				window.close();
 		}
 		window.clear();
-		sprite.setScale(sprite.getScale() + sf::Vector2f(0.0001,0.0001));
+		
 		window.draw(sprite);
 		window.display();
 	}

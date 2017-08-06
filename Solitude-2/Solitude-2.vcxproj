@@ -133,6 +133,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentSystem.h" />
+    <ClInclude Include="EventQueue.h" />
     <ClInclude Include="FrameData.h" />
     <ClInclude Include="GraphicsCache.h" />
     <ClInclude Include="GraphicsLoader.h" />
@@ -140,10 +142,11 @@
     <ClInclude Include="GraphicsMessageQueue.h" />
     <ClInclude Include="GraphicsStorage.h" />
     <ClInclude Include="ImageData.h" />
-    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SolGame.h" />
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="SolitudeHeaders.h" />
     <ClInclude Include="TextureData.h" />
+    <ClInclude Include="Transform.h" />
     <ClInclude Include="UtilityFunctions.h" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +157,7 @@
     <ClCompile Include="GraphicsStorage.cpp" />
     <ClCompile Include="ImageData.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SolGame.cpp" />
     <ClCompile Include="TextureData.cpp" />
     <ClCompile Include="UtilityFunctions.cpp" />
   </ItemGroup>

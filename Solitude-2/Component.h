@@ -1,7 +1,10 @@
 #pragma once
+#include "SolitudeHeaders.h"
 
 class Component
 {
-public:
+private:
+	std::string type;
 	unsigned int objectId;
+public:
 };

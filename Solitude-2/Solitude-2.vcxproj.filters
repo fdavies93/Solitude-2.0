@@ -63,7 +63,16 @@
     <ClInclude Include="Component.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
-    <ClInclude Include="SceneManager.h">
+    <ClInclude Include="Transform.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="EventQueue.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="SolGame.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
   </ItemGroup>
@@ -94,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="GraphicsMessageQueue.cpp">
       <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="SolGame.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
