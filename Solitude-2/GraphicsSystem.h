@@ -3,7 +3,6 @@
 #include "GraphicsStorage.h"
 #include "GraphicsCache.h"
 #include "Transform.h"
-#include "EventQueue.h"
 
 class GraphicsSystem
 {

@@ -1,8 +1,10 @@
 #pragma once
-#include "DataPipeline.h"
 #include "SolitudeHeaders.h"
+#include "SolSystem.h"
 
-class CameraSystem
+class CameraSystem : SolSystem
 {
-	std::shared_ptr<DataPipeline> pipeline;
+public:
+	CameraSystem(std::shared_ptr<DataPipeline>);
+	void Update();
 };

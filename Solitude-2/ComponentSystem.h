@@ -7,9 +7,12 @@
 class ComponentSystem
 {
 private:
-	std::map<std::string, std::list<std::shared_ptr<Component>>> components;//maps component typename to components
+	//might want it to be possible both to pass components by reference
+	//and copy them
+	std::map<std::string, std::list<Component>> components;//maps component typename to components
 public:
 	void AddComponent(unsigned int, std::shared_ptr<Component>);//object id, component
 	void RemoveComponent(unsigned int, std::shared_ptr<Component>);//object id, component type
+	void RemoveObject(unsigned int);
 	std::list<std::shared_ptr<Component>> GetComponentsByType(std::string);//returns list of ALL components of a certain type
 };
